@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Zoológico</title>
+
+
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <!-- Modal -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          <small class="text-muted"></small>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+
+
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Adicionar animais
+  </button>
+  <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="ModalRegistroLabel" aria-hidden="true">
+    <div class="modal-dialog modal.lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Animal</label>
+                <input type="text" class="form-control" placeholder="digite o nome..." />
+                <div class="form-group">
+                  <label for="">Descrição</label>
+                  <input type="text" class="form-control" placeholder="breve resumo sobre o animal...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <h1 style="font-style: oblique ;font-size:50px;color: yellowgreen;">Zoológico</h1>
+  <p style="font-size: 40px;font-style: italic;">Girafa (Giraffa camelopardilis)</p>
+  <details style="font-size: 20px;">As girafas são os únicos membros de seu gênero e, juntas com os ocapis, formam a
+    família Giraffidae. Atualmente estão listadas quatro espécies de girafa existentes e nove já extintas,
+    diferenciadas
+    também pela distribuição geográfica e pelo padrão das manchas.
+  </details>
+  <img src="images.jpg" width="60%" height="100%" alt="imagem girafa">
+  <legend style="font-size: 18px;">
+    Comprimento: 4,2 m;
+    Período de Gestação 15 meses;
+    Velocidade: 60 km/h;
+    Horas de Sono: 4,6 horas (em cativeiro);
+    Altura: 5 – 5,9 m (Macho, Adulto), 4,3 – 5,2 m (Fêmea, Adulto).
+  </legend>
+  <p style="font-size: 40px; font-style: italic;">Onça Pintada (Panthera onca)</p>
+  <details style="font-size: 20px;">A onça-pintada ou jaguar, também conhecida como onça-preta, é uma espécie de
+    mamífero carnívoro da família dos felídeos encontrada nas Américas. É o terceiro maior felino do mundo, após o
+    tigre e o leão, e o maior do continente americano.</details>
+  <img
+    src="https://images.ecycle.com.br/wp-content/uploads/2020/01/15184202/ramon-vloon-9Up5W9NITQw-unsplash-scaled.jpg.webp"
+    width="60%" height="100%">
+  <legend style="font-size: 18px;">Peso: 56 – 96 kg (Adulto)
+    Altura: 68 – 75 cm (até ao ombro)
+    Comprimento: 1,1 – 1,8 m (Adulto, Nariz à base da cauda)
+    Expectativa de Vida: 12 – 15 anos (na natureza)
+    Velocidade: 80 km/h (Maximum)
+    Período de Gestação: 93 – 105 dias
+  </legend>
+  <p style="font-size: 40px;font-style: italic;">Elefante (Loxodonta)</p>
+  <details style="font-size: 20px;">Os elefantes são animais herbívoros, alimentando-se de ervas, gramíneas,
+    frutas e
+    folhas de árvores. Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.
+    As
+    fêmeas vivem em manadas de 10 a 15 animais, lideradas por uma matriarca, compostas por várias reprodutoras e
+    crias
+    de variadas idades. O período de gestação das fêmeas é longo (20 a 22 meses), assim como o desenvolvimento do
+    animal que leva anos a atingir a idade adulta. Os filhotes podem nascer com 90 kg. Os machos adolescentes
+    tendem a
+    viver em pequenos grupos e os machos adultos isolados, encontrando-se com as fêmeas apenas no período
+    reprodutivo.
+  </details>
+  <img src="elefante.jpg" width="60%" height="100%" alt="imagem elefante">
+  <legend style="font-size: 18px;">Altura: Elefante-da-savana: 3,2 m
+    Período de Gestação: Elefante-da-savana: 22 meses
+    Classificação superior: Elephantidae
+    Velocidade: Elefante-da-savana: 40 km/h
+    Expectativa de Vida: Elefante-da-savana: 60 – 70 anos, Elefante-da-floresta: 60 – 70 anos</legend>
+  <p style="font-size: 40px;font-style: italic;">Leão (Panthera leo)</p>
+  <details style="font-size: 20px;">O Leão é uma espécie de mamífero carnívoro do gênero Panthera e da família
+    Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única população
+    remanescente
+    em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia. Foi extinto na África do Norte e no Sudoeste
+    Asiático em tempos históricos, e até o Pleistoceno Superior, há cerca de 10 000 anos, era o mais difundido
+    grande
+    mamífero terrestre depois dos humanos, sendo encontrado na maior parte da África, em muito da Eurásia, da
+    Europa
+    Ocidental à Índia, e na América, do Yukon ao México. É uma dos quatro grandes felinos, com alguns machos
+    excedendo
+    250 quilogramas em peso, sendo o segundo maior felino recente depois do tigre.</details>
+  <img src="https://static.todamateria.com.br/upload/le/ao/leao-og.jpg" width="60%" height="100%" alt="imagem Leão">
+  <legend style="font-size: 18px;">Expectativa de Vida: 15 – 16 anos (Fêmea, Adulto, na natureza), 8 – 10 anos
+    (Macho,
+    Adulto, na natureza
+    Peso: 190 kg (Macho, Adulto), 130 kg (Fêmea, Adulto)
+    Altura: 1,2 m (Macho, Adulto, até ao ombro), 90 – 110 cm (Fêmea, Adulto, até ao ombro)
+    Comprimento: 1,8 – 2,1 m (Macho, cabeça e corpo), 1,6 – 1,8 m (Fêmea, cabeça e corpo)
+    Velocidade: 80 km/h
+
+  </legend>
+  <p style="font-size: 40px;font-style: italic;">Hipopótamo (Hippopotamus amphibius)</p>
+  <details style="font-size: 20px;">O hipopótamo-comum ou hipopótamo-do-nilo é um mamífero herbívoro de grande
+    porte
+    da África subsariana e uma das duas únicas espécies não extintas da família Hippopotamidae, sendo a outra o
+    hipopótamo-pigmeu. O seu nome provém do grego antigo, significando "cavalo do rio". Apesar das suas
+    semelhanças
+    físicas com os porcos e outros ungulados artiodáctilos (sendo por isso designado de animal porcino), os seus
+    parentes vivos mais próximos são os cetáceos (baleias, os golfinhos, etc.) dos quais divergiram há cerca de 55
+    milhões de anos. </details>
+  <img src="hipopotamo-.jpg" width="60%" height="100%" alt="imagem Hipopótamo">
+  <legend style="font-size: 18px;">Peso: 1.500 – 1.800 kg (Macho, Adulto), 1.300 – 1.500 kg (Fêmea, Adulto)
+    Velocidade: 30 km/h (galopando)
+    Nível Trófico: Onívoro
+    Altura: 1,3 – 1,6 m (Adulto, até ao ombro)
+    Expectativa de Vida: 40 – 50 anos
+    Comprimento: 2,9 – 5 m (Adulto)
+  </legend>
+  <p style="font-size: 40px;font-style: italic;">Tamanduá-bandeira (Myrmecophaga tridactyla)</p>
+  <details style="font-size: 20px;">O tamanduá-bandeira , também chamado bandeira, bandurra, iurumi, jurumi,
+    jurumim,
+    tamanduá-açu, tamanduá-cavalo, papa-formigas-gigante e urso-formigueiro-gigante, é uma espécie de mamífero
+    xenartro da família dos mirmecofagídeos, encontrado na América Central e na América do Sul. É a maior das
+    quatro
+    espécies de tamanduás e, junto com as preguiças, está incluído na ordem Pilosa.</details>
+  <img src="TAMANDUA.jpg" width="60%" height="100%" alt="imagem Tamanduá">
+  <legend style="font-size: 18px;">Peso: 33 – 41 kg (Macho, Adulto), 27 – 39 kg (Fêmea, Adulto)
+    Período de Gestação: 183 dias
+    Nível Trófico: Carnívoro
+    Comprimento: 1,8 – 2,2 m (Adulto)
+    Expectativa de Vida: 14 anos (na natureza)
+  </legend>
+  <p style="font-size: 40px; font-style: italic;">Jibóia (Boidae)</p>
+  <details style="font-size: 20px;">As Jiboias são animais que possuem um grande corpo comprido e cilíndrico. O
+    seu
+    tamanho é uma característica marcante, sendo observados indivíduos de até quatro metros de comprimento. As
+    fêmeas,
+    quando comparadas aos machos, destacam-se por apresentarem um tamanho maior. A coloração das jiboias é variada
+    e,
+    dependendo da subespécie, podemos observar diferentes padrões. Alguns indivíduos, por exemplo, apresentam a
+    cor
+    cinza predominante; outros, a coloração marrom; e existem ainda aqueles que possuem coloração bem escura,
+    quase no
+    tom de preto. As escamas das jiboias são pequenas e irregulares.</details>
+  <img src="Jibóia.webp" width="60%" height="100%" alt="imagem jiboia">
+  <legend style="font-size: 18px;">Comprimento: Jiboia-constritora: 2,1 – 3 m.
+    Classificação superior: Alethinophidia
+    Classificação: Família
+    Classe: Reptilia Sauropsida
+    Família: Boidae; Gray, 1825
+  </legend>
+  <p style="font-size: 40px; font-style: italic;">Jacaré (Alligatoridae)</p>
+  <details style="font-size: 20px;">Os jacarés se diferenciam dos crocodilos por possuírem uma cabeça mais curta e
+    mais larga, com focinhos mais avantajados. Onde Jacarés ingerem carne e peixe.
+    O menor jacaré é o jacaré-anão, cujo comprimento varia entre 1,2 e 1,4 metros e pesa de 6 a 7 quilogramas. O
+    aligátor-americano tem um tamanho médio de 3 a 4,6 metros, chegando até 5,3 metros e 400 quilogramas. O
+    tamanho
+    médio do jacaré-açu é de 2,8 a 4,2 metros, podendo alcançar os 6 metros e mais de 400 quilogramas.
+  </details>
+  <img src="jacaré.jpg" width="60%" height="100%" alt="imagem jacaré">
+  <legend style="font-size: 18px;">Expectativa de Vida: Aligátor-americano: 30 – 50 anos
+    Comprimento: Aligátor-americano: 3 – 4,6 m, Jacaré-da-china: 1,5 – 2,1 m
+    Velocidade: Jacaré-açu: 48 km/h
+    Número de Ovos: Aligátor-americano: 20 – 50
+    Classificação superior: Crocodylia
+  </legend>
+  <p style="font-size: 40px; font-style: italic;">Coala (Phascolarctos cinereus)</p>
+  <details style="font-size: 20px;">O coala é um mamífero marsupial herbívoro arbóreo nativo da Austrália. É o
+    único
+    representante existente da família Phascolarctidae e seus parentes vivos mais próximos são os vombates, que
+    são
+    membros da família Vombatidae.</details>
+  <img src="coala.jpg" width="60%" height="100%" alt="imagem coala">
+  <legend style="font-size: 18px;">Comprimento: 60 – 85 cm (Adulto)
+    Expectativa de Vida: 13 – 18 anos (na natureza)
+    Período de Gestação: 30 – 36 dias
+    Nível Trófico: Herbívoro
+    Peso: 4 – 15 kg (Adulto)
+  </legend>
+  <p style="font-size: 40px;font-style: italic;">Bicho-Pregiça (Folivora)</p>
+  <details style="font-size: 20px;">Folivora é uma subordem de mamíferos, da ordem Pilosa, cujas espécies são
+    conhecidas popularmente por preguiça, bicho-preguiça, aí, aígue e cabeluda. São mamíferos arborícolas e estão
+    divididos em dois gêneros, Bradypus e Choloepus. Representam a superordem Xenarthra, juntamente com os
+    tamanduás e
+    tatus.
+    Todos os dedos têm garras longas pelas quais a preguiça se pendura aos galhos das árvores, com o dorso para
+    baixo.
+    Seu nome advém do metabolismo muito lento do seu organismo, responsável pelos seus movimentos extremamente
+    lentos.
+    É um animal de pelos longos, que vive na copa das árvores de florestas tropicais desde a América Central até o
+    norte da Argentina. Na Mata Atlântica, o animal se alimenta dos frutos da Cecropia (a embaúba, conhecida, por
+    isto, como árvore-da-preguiça).
+  </details>
+  <img src="bicho preguiça.jpg" width="60%" height="100%" alt="imagem bicho preguiça">
+  <legend style="font-size: 18px;">Horas de Sono: Preguiça-comum: 15 – 18 horas
+    Comprimento: Preguiça-comum: 42 – 80 cm,
+    Classificação superior: Pilosa
+    Período de Gestação: Preguiça-comum: 182 dias, Preguiça-de-bentinho: 182 dias, Preguiça-de-coleira: 150 dias
+    Velocidade: 0,27 km/h (sob ameaça)
+  </legend>
+  <p style="font-size: 40px;font-style: italic;">Quati (Nasua)</p>
+  <details style="font-size: 20px;">O Quati é um mamífero da ordem Carnivora, da família Procyonidae e do gênero
+    Nasua. O grupo está distribuído desde o Arizona até o norte da Argentina, possuindo três espécies: Nasua
+    nasua,
+    Nasua narica e Nasua nelsoni. Este animal também é conhecido por seu nome popular "Tamanduá Palito". Vive em
+    bandos de 4 a 20 indivíduos, é praticamente onívoro e se adapta bem ao cativeiro. São animais diurnos, mas ás
+    vezes o macho faz atividades noturnas.</details>
+  <img src="Quati.jpg" width="60%" height="100%" alt="imagem quati">
+  <legend style="font-size: 18px;">Período de Gestação: Quati-de-cauda-anelada: 75 dias, Quati-de-nariz-branco: 77
+    dias
+    Comprimento: Quati-de-cauda-anelada: 53 cm, Quati-de-nariz-branco: 55 cm
+    Classe: Mammalia
+    Família: Procyonidae
+    Filo: Chordata
+  </legend>
+  <p style="font-size:40px;font-style:italic">Lobo-Guará (Chrysocyon brachyurus)</p>
+  <details style="font-size: 20px;">É o maior canídeo da América do Sul, podendo atingir entre 20 e 30 quilos de
+    peso
+    e até 90 centímetros na altura da cernelha. Suas pernas longas e finas e a densa pelagem avermelhada lhe
+    conferem
+    uma aparência inconfundível. O lobo-guará é adaptado aos ambientes abertos das savanas sul-americanas, sendo
+    um
+    animal crepuscular e onívoro, com importante papel na dispersão de sementes de frutos do cerrado,
+    principalmente a
+    lobeira. Solitário, os territórios são divididos entre um casal, que se encontra no período do estro da fêmea.
+    Esses territórios são bastante amplos, podendo ter uma área de até 123 km². A comunicação se dá principalmente
+    através de marcação de cheiro, mas também ocorrem vocalizações semelhantes a latidos. A gestação dura até 65
+    dias,
+    com os recém-nascidos de cor preta pesando entre 340 e 430 gramas.
+
+  </details>
+  <img src="Lobo-guará.jpg" width="60%" height="100%" alt="imagem Lobo-Guará">
+  <legend style="font-size: 18px;">Comprimento: 1,2 m (Adulto)
+    Nível Trófico: Onívoro
+    Peso: 23 kg (Macho, Adulto)
+    Estado de Conservação: Quase ameaçada
+    Período de Gestação: 63 dias
+    Classificação superior: Chrysocyon
+  </legend>
+  <p style="font-size:40px; font-style: italic;">Crocodilo (Crocodylidae)</p>
+  <details style="font-size: 20px;">Os crocodilos ou Crocodylidae são uma família de répteis com quatorze
+    espécies. O
+    termo "crocodilo" também é usado às vezes num sentido mais amplo para se referir à ordem Crocodylia
+    (crocodilianos). Os crocodilos verdadeiros (família Crocodylidae), os gaviais (família Gavialidae) e os
+    caimões,
+    os aligatores e jacarés (família Alligatoridae).
+    Os crocodilos vivem nas Américas, África, Ásia e Austrália. A maioria dos crocodilos vivem nas margens de
+    rios,
+    enquanto os da Austrália e ilhas do Pacífico também frequentam o mar. Os crocodilos não possuem predadores
+    naturais, por se tratar de um animal de topo na cadeia alimentar.
+    O maior réptil hoje na face da terra é o crocodilo-de-água-salgada encontrado no norte da Austrália e ilhas do
+    sudeste da Ásia.
+  </details>
+  <img src="Crocodilo.jpg" width="60%" height="100%" alt="">
+  <legend style="font-size: 18px;">Expectativa de Vida: Crocodilo-de-água-salgada: 70 anos, Crocodilo-do-nilo: 50
+    – 60
+    anos
+    Comprimento: Crocodilo-de-água-salgada: 3,5 – 6 m, Crocodilo-americano: 4,1 – 4,8 m, Crocodilo-do-nilo: 4,2 m
+    Velocidade: Crocodilo-de-água-salgada: 24 – 29 km/h, Crocodilo-americano: 32 km/h, Crocodilo-do-nilo: 30 – 35
+    km/h
+    Classificação superior: Crocodyloidea
+    Número de Ovos: Crocodilo-de-água-salgada: 40 – 60, Crocodilo-americano: 30 – 70, Crocodilo-do-nilo: 25 – 80.
+
+  </legend>
+  <p style="font-size:40px;font-style:italic;">Urso-Pardo (Ursus arctos)</p>
+  <details style="font-size: 20px;">O urso-pardo é um mamífero carnívoro da família dos ursídeos. É o urso de mais
+    ampla distribuição geográfica dentre todos os membros vivos de sua família. É um dos maiores carnívoros
+    terrestres
+    da atualidade, rivalizado em tamanho corporal apenas com seu parente próximo, o urso polar, que é muito menos
+    variável em tamanho e maior devido a isso. Existem varias subespécies reconhecidas, muitas das quais são bem
+    conhecidas em sua área de ocorrência.
+    O urso pardo ocorre em partes da Rússia, Ásia central, China, Canadá, Estados Unidos (principalmente o
+    Alasca),
+    Escandinávia e região dos Cárpatos (especialmente a Romênia), Anatólia e Cáucaso. O urso pardo é reconhecido
+    como
+    o animal nacional e estadual de vários países europeus.
+  </details>
+  <img src="Urso-Pardo.jpg" width="60%" height="100%" alt="">
+  <legend style="font-size: 18px;">Altura: 70 – 150 cm (até ao ombro)
+    Peso: 80 – 600 kg (Adulto)
+    Comprimento: 1,4 – 2,8 m (Adulto, cabeça e corpo)
+    Velocidade: 56 km/h (Maximum)
+    Expectativa de Vida: 20 – 30 anos (na natureza)
+    Nível Trófico: Onívoro
+  </legend>
+  <p style="font-size: 40px; font-style: italic;">Chinchila</p>
+  <details style="font-size: 20px;">Descrição</details>
+  <img src="chincila.jpg" width="60%" height="100%" alt="imagem chinchila">
+  <legend style="font-size: 18px;">Legenda</legend>
+
+
+</body>
+
+</html>
